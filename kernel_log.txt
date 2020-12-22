@@ -1,0 +1,4 @@
+Serial Initialised!
+Allocated 6 bits, now at <0x106064>
+Initilised screen at addr: 0xFD000000 (190 x 7<0)
+Boot Complete
