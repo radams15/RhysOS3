@@ -3,7 +3,7 @@
 int pow(int num, int power){
 	int out = num;
 	for(int i=0 ; i<power ; i++){
-		out *= power;
+		out *= num;
 	}
 	
 	return out;

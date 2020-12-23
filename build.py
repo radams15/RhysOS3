@@ -48,8 +48,7 @@ def comp_kernel():
     
     c_files = glob("kernel/src/**/*.c", recursive=True)
     
-    files = asm_files + c_files   
-    
+    files = list(set(asm_files + c_files))
     
     for c_file in files:
         obj_file = (splitext(c_file)[0]+".o").replace("kernel/src", "build/kernel")

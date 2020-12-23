@@ -21,4 +21,6 @@ void VBE_rect(uint32 x, uint32 y, uint32 w, uint32 h, uint32 colour);
 
 void VBE_set_bg(uint32 colour);
 
+void VBE_putc(char c, uint32 x, uint32 y, uint32 colour);
+
 #endif // VBE_H_INCLUDED

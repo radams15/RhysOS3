@@ -1,4 +1,7 @@
 Serial Initialised!
-Allocated 6 bits, now at <0x106064>
-Initilised screen at addr: 0xFD000000 (190 x 7<0)
+Initialised IDTs
+IRQs Ready!
+Added Handler For IRQ33
+Allocated 16 bits, now at <0x107C94>
+Initilised screen at addr: 0xFD000000 (4096 x 1024)
 Boot Complete

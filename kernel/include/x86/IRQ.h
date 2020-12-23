@@ -11,7 +11,7 @@
 #include <x86/TTY.h>
 #include <x86/serial.h>
 
-enum irq_codes {
+enum IRQ_codes {
     IRQ0 = 32,
     IRQ1 = 33,
     IRQ2 = 34,
@@ -30,16 +30,16 @@ enum irq_codes {
     IRQ15 = 47
 };
 
-typedef void (*irq_callback)(registers);
+typedef void (*IRQ_callback)(registers);
 
-void enable();
-void disable();
+void IRQ_enable();
+void IRQ_disable();
 
-void init();
+void IRQ_init();
 
-extern void handle_irq(registers regs);
+extern void IRQ_handle(registers regs);
 
-void add_handler(uint8 n, irq_callback handler);
+void IRQ_add_handler(uint8 n, IRQ_callback handler);
 
 extern void irq0();
 extern void irq1();

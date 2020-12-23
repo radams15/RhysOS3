@@ -3,12 +3,6 @@
 
 #include <Types.h>
 
-extern void GDT_flush(uint32);
-
-// Internal function prototypes.
-void GDT_init();
-void GDT_set_gate(uint32, uint32, uint32, uint8, uint8);
-
 // This structure contains the value of one GDT entry.
 // We use the attribute 'packed' to tell GCC not to change
 // any of the alignment in the structure.
@@ -31,4 +25,11 @@ struct GDT_ptr_struct {
 } __attribute__((packed));
 typedef struct GDT_ptr_struct GDT_ptr_t;
 
+
+extern void GDT_flush(uint32);
+
+void GDT_init();
+void GDT_set_gate(uint32 num, uint32 base, uint32 limit, uint8 access, uint8 gran);
+
 #endif // GDT_H_INCLUDED
+
