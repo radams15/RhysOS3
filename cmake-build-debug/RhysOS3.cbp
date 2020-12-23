@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="RhysOS3"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/rhys/scripts/Projects/RhysOS3/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/rhys/scripts/Projects/RhysOS3/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/rhys/scripts/Projects/RhysOS3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/rhys/scripts/Projects/RhysOS3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/rhys/scripts/Projects/RhysOS3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/rhys/scripts/Projects/RhysOS3/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/rhys/scripts/Projects/RhysOS3/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/rhys/scripts/Projects/RhysOS3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/rhys/scripts/Projects/RhysOS3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/rhys/scripts/Projects/RhysOS3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/rhys/scripts/Projects/RhysOS3/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/rhys/scripts/Projects/RhysOS3/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/rhys/scripts/Projects/RhysOS3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/rhys/scripts/Projects/RhysOS3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/rhys/scripts/Projects/RhysOS3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="RhysOS3">
+				<Option output="/home/rhys/scripts/Projects/RhysOS3/cmake-build-debug/RhysOS3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rhys/scripts/Projects/RhysOS3/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/rhys/scripts/Projects/RhysOS3/kernel/include"/>
+					<Add directory="/home/rhys/scripts/Projects/RhysOS3/kernel/include/x86"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/rhys/scripts/Projects/RhysOS3/cmake-build-debug/Makefile&quot;  VERBOSE=1 RhysOS3"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/rhys/scripts/Projects/RhysOS3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/rhys/scripts/Projects/RhysOS3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/rhys/scripts/Projects/RhysOS3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="RhysOS3/fast">
+				<Option output="/home/rhys/scripts/Projects/RhysOS3/cmake-build-debug/RhysOS3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rhys/scripts/Projects/RhysOS3/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/rhys/scripts/Projects/RhysOS3/kernel/include"/>
+					<Add directory="/home/rhys/scripts/Projects/RhysOS3/kernel/include/x86"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/rhys/scripts/Projects/RhysOS3/cmake-build-debug/Makefile&quot;  VERBOSE=1 RhysOS3/fast"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/rhys/scripts/Projects/RhysOS3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/rhys/scripts/Projects/RhysOS3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/rhys/scripts/Projects/RhysOS3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/rhys/scripts/Projects/RhysOS3/kernel/include/Types.h">
+			<Option target="RhysOS3"/>
+		</Unit>
+		<Unit filename="/home/rhys/scripts/Projects/RhysOS3/kernel/include/VBE.h">
+			<Option target="RhysOS3"/>
+		</Unit>
+		<Unit filename="/home/rhys/scripts/Projects/RhysOS3/kernel/include/math.h">
+			<Option target="RhysOS3"/>
+		</Unit>
+		<Unit filename="/home/rhys/scripts/Projects/RhysOS3/kernel/include/memory.h">
+			<Option target="RhysOS3"/>
+		</Unit>
+		<Unit filename="/home/rhys/scripts/Projects/RhysOS3/kernel/include/string.h">
+			<Option target="RhysOS3"/>
+		</Unit>
+		<Unit filename="/home/rhys/scripts/Projects/RhysOS3/kernel/include/x86/GDT.h">
+			<Option target="RhysOS3"/>
+		</Unit>
+		<Unit filename="/home/rhys/scripts/Projects/RhysOS3/kernel/include/x86/IDT.h">
+			<Option target="RhysOS3"/>
+		</Unit>
+		<Unit filename="/home/rhys/scripts/Projects/RhysOS3/kernel/include/x86/IRQ.h">
+			<Option target="RhysOS3"/>
+		</Unit>
+		<Unit filename="/home/rhys/scripts/Projects/RhysOS3/kernel/include/x86/ISR.h">
+			<Option target="RhysOS3"/>
+		</Unit>
+		<Unit filename="/home/rhys/scripts/Projects/RhysOS3/kernel/include/x86/TTY.h">
+			<Option target="RhysOS3"/>
+		</Unit>
+		<Unit filename="/home/rhys/scripts/Projects/RhysOS3/kernel/include/x86/VGA.h">
+			<Option target="RhysOS3"/>
+		</Unit>
+		<Unit filename="/home/rhys/scripts/Projects/RhysOS3/kernel/include/x86/io.h">
+			<Option target="RhysOS3"/>
+		</Unit>
+		<Unit filename="/home/rhys/scripts/Projects/RhysOS3/kernel/include/x86/multiboot.h">
+			<Option target="RhysOS3"/>
+		</Unit>
+		<Unit filename="/home/rhys/scripts/Projects/RhysOS3/kernel/include/x86/registers.h">
+			<Option target="RhysOS3"/>
+		</Unit>
+		<Unit filename="/home/rhys/scripts/Projects/RhysOS3/kernel/include/x86/serial.h">
+			<Option target="RhysOS3"/>
+		</Unit>
+		<Unit filename="/home/rhys/scripts/Projects/RhysOS3/kernel/src/VBE.c">
+			<Option target="RhysOS3"/>
+		</Unit>
+		<Unit filename="/home/rhys/scripts/Projects/RhysOS3/kernel/src/main.c">
+			<Option target="RhysOS3"/>
+		</Unit>
+		<Unit filename="/home/rhys/scripts/Projects/RhysOS3/kernel/src/math.c">
+			<Option target="RhysOS3"/>
+		</Unit>
+		<Unit filename="/home/rhys/scripts/Projects/RhysOS3/kernel/src/memory.c">
+			<Option target="RhysOS3"/>
+		</Unit>
+		<Unit filename="/home/rhys/scripts/Projects/RhysOS3/kernel/src/string.c">
+			<Option target="RhysOS3"/>
+		</Unit>
+		<Unit filename="/home/rhys/scripts/Projects/RhysOS3/kernel/src/x86/GDT.c">
+			<Option target="RhysOS3"/>
+		</Unit>
+		<Unit filename="/home/rhys/scripts/Projects/RhysOS3/kernel/src/x86/IDT.c">
+			<Option target="RhysOS3"/>
+		</Unit>
+		<Unit filename="/home/rhys/scripts/Projects/RhysOS3/kernel/src/x86/IRQ.c">
+			<Option target="RhysOS3"/>
+		</Unit>
+		<Unit filename="/home/rhys/scripts/Projects/RhysOS3/kernel/src/x86/ISR.c">
+			<Option target="RhysOS3"/>
+		</Unit>
+		<Unit filename="/home/rhys/scripts/Projects/RhysOS3/kernel/src/x86/TTY.c">
+			<Option target="RhysOS3"/>
+		</Unit>
+		<Unit filename="/home/rhys/scripts/Projects/RhysOS3/kernel/src/x86/io.c">
+			<Option target="RhysOS3"/>
+		</Unit>
+		<Unit filename="/home/rhys/scripts/Projects/RhysOS3/kernel/src/x86/serial.c">
+			<Option target="RhysOS3"/>
+		</Unit>
+		<Unit filename="/home/rhys/scripts/Projects/RhysOS3/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

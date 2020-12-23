@@ -22,7 +22,7 @@ void early_init(multiboot_info* mb_info){
     
     IRQ_add_handler(IRQ1, key);
     
-    VBE_init((void*) mb_info->framebuffer_addr, mb_info->framebuffer_width, mb_info->framebuffer_height, mb_info->framebuffer_bpp);
+    //VBE_init((void*) mb_info->framebuffer_addr, mb_info->framebuffer_width, mb_info->framebuffer_height, mb_info->framebuffer_bpp);
     
     serial_write("Boot Complete\n");
     

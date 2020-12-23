@@ -48,3 +48,17 @@ void hex_str(uint32 n, char* out){
 
     out[length+2] = NULL;
 }
+
+uint32 num_size(uint32 num) {
+    uint32 size = 0;
+
+    while(TRUE) {
+        num = num / 10;
+        size++;
+        if (num == 0) {
+            break;
+        }
+    }
+
+    return size;
+}

@@ -48,8 +48,88 @@ void TTY_putc(char c) {
     }
 }
 
-void TTY_print(const char* c){
-    for(uint32 i=0 ; i<strlen(c) ; i++){
-        TTY_putc(c[i]);
+void TTY_puti(int num){
+    uint32 power;
+    uint32 size = num_size(num);
+
+    power = pow(10, size - 1);
+
+    uint32 p, i;
+
+    while(TRUE){
+        p = num % power;
+
+        if(power > 10) {
+            i = p / (power / 10);
+            TTY_putc(chr(i));
+        }else {
+            TTY_putc(chr(p));
+            break;
+        }
+
+        power /= 10;
+
+        if(power == 0){
+            break;
+        }
+    }
+}
+
+void TTY_print(const char* text, ...){
+    va_list args;
+
+    va_start(args, NULL);
+
+    TTY_print_args(text, args);
+
+    va_end(args);
+}
+
+
+void TTY_print_args(const char* text, va_list args){
+    bool skip_next = FALSE;
+
+    for (int i=0; text[i] != NULL; i++){
+        if(skip_next){
+            skip_next = FALSE;
+            continue;
+        }
+
+        if(text[i] == FORMAT_MARK){
+            char formatter = text[i+1];
+
+            switch(formatter){
+                case 'd': // int
+                    TTY_puti(va_arg(args, uint32));
+                    break;
+
+                case 'c': // char
+                    TTY_putc(va_arg(args, uint32));
+                    break;
+
+                case 's': // string
+                    TTY_print(va_arg(args, char*));
+                    break;
+
+                case 'x': // hex int
+                    TTY_print("");
+                    char buf[32];
+                    hex_str(va_arg(args, uint32), buf);
+                    TTY_print(buf);
+                    break;
+
+                case FORMAT_MARK:
+                    TTY_putc(FORMAT_MARK);
+                    break;
+
+                default:
+                    break;
+            }
+
+            skip_next = TRUE;
+
+        }else{
+            TTY_putc(text[i]);
+        }
     }
 }

@@ -5,5 +5,6 @@
 
 int pow(int num, int power);
 void hex_str(uint32 n, char* out);
+uint32 num_size(uint32 num);
 
 #endif // MATH_H_INCLUDED
