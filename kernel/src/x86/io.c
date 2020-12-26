@@ -19,5 +19,6 @@ uint8 inb(uint16 port){
 }
 
 void halt(){
+    TTY_print("\nSystem Has Halted\n\n");
     asm("hlt");
 }

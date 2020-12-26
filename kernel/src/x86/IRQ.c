@@ -49,6 +49,7 @@ void IRQ_init(){
 }
 
 extern void IRQ_handle(registers regs){
+    TTY_print("IRQ!\n");
     if (regs.int_no >= 40){
         outb(0xA0, 0x20); // Send reset signal to slave.
     }

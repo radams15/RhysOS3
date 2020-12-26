@@ -2,8 +2,8 @@
   .global isr\n
   isr\n:
     cli                         # Disable interrupts firstly.
-    push 0                 # Push a dummy error code - no error code for us!
-    push \n                # Push the interrupt number.
+    push $0                 # Push a dummy error code - no error code for us!
+    push $\n                # Push the interrupt number.
     jmp isr_common_stub         # Go to our common handler code.
 .endm
 
@@ -12,7 +12,7 @@
   .global isr\n
   isr\n:
     cli                         # Disable interrupts.
-    push \n                # Push the interrupt number
+    push $\n                # Push the interrupt number
     jmp isr_common_stub
 .endm
 
@@ -89,9 +89,9 @@ isr_common_stub:
   .global irq\n
   irq\n:
     cli
-    push 0
-    push \v
-    jmp irq_common_stub
+    push $0
+    push $\v
+    jmp IRQ_common_stub
 .endm
 
 IRQ   0,    32
@@ -113,12 +113,12 @@ IRQ  15,    47
 
 
 # In isr.c
-.extern handle_irq
+.extern IRQ_handle
 
 # This is our common IRQ stub. It saves the processor state, sets
 # up for kernel mode segments, calls the C-level fault handler,
 # and finally restores the stack frame.
-irq_common_stub:
+IRQ_common_stub:
     pusha                    # Pushes edi,esi,ebp,esp,ebx,edx,ecx,eax
 
     mov %ds, %ax               # Lower 16-bits of eax = ds.

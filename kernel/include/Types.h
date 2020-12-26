@@ -11,6 +11,9 @@ typedef short int16;
 typedef int int32;
 typedef long int64;
 
+typedef uint32 size_t;
+typedef int32 time_t;
+
 typedef uint8 bool;
 
 #define TRUE 1
