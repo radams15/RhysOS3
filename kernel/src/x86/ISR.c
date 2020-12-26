@@ -4,6 +4,6 @@
 
 #include <x86/ISR.h>
 
-extern void isr_handler(registers regs){
-    TTY_print("recieved interrupt: %d\n");
+void ISR_handle(registers regs){
+
 }

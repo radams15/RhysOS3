@@ -1,56 +1,37 @@
-.set MBALIGN,    1<<0             /* align loaded modules on page boundaries */
+.set MBALIGN,  1<<0             /* align loaded modules on page boundaries */
 .set MEMINFO,  1<<1             /* provide memory map */
 .set FLAGS,    MBALIGN | MEMINFO  /* this is the Multiboot 'flag' field */ // add "| 0x4" for graphics mode
 .set MAGIC,    0x1BADB002       /* 'magic number' lets bootloader find the header */
 .set CHECKSUM, -(MAGIC + FLAGS) /* checksum of above, to prove we are multiboot */
 
-multiboot:
+.global mboot
+.global code
+.global bss
+.global mem_end
+
+mboot:
     .align 4
     .long MAGIC
     .long FLAGS
     .long CHECKSUM
 
-    .long multiboot
-    .long 0x0
-    .long 0x0
-    .long 0x0
-    .long _start
-    /*.long 0x0 // for graphics mode
-    .long 0x0
-    .long 0x0
-    .long 0x0
-    .long 0x0
-    .long 0
+    .long mboot
+    .long code
+    .long bss
+    .long mem_end
+    .long start
+    /*.long 0 // for graphics mode
     .long 1024 #1920;
     .long 768  #1080;
     .long 32*/
- 
 
-.section .bss
-.align 16
-stack_bottom:
-.skip 16384 # 16 KiB
-stack_top:
-
-.section .text
-.global _start
-_start:
-	mov $stack_top, %esp
-	
+.global start
+start:
 	push %ebx
-
-	call kmain
-
 	cli
-
+	call kmain
 	jmp loop
 
 loop:
     hlt
 	jmp loop
- 
-/*
-Set the size of the _start symbol to the current location '.' minus its start.
-This is useful when debugging or when you implement call tracing.
-*/
-.size _start, . - _start

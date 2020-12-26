@@ -10,7 +10,7 @@
 #include <x86/serial.h>
 #include <x86/io.h>
 
-extern void isr_handler(registers regs);
+void ISR_handle(registers regs);
 
 
 #endif //RHYSOS_ISR_H

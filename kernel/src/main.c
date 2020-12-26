@@ -23,8 +23,9 @@ void early_init(multiboot_info* mb_info){
     IDT_init();
     IRQ_init();
 
-    //IRQ_add_handler(IRQ1, key);
-    //IRQ_enable();
+    IRQ_add_handler(IRQ1, key);
+
+    IRQ_enable();
 }
 
 bool loop(){
@@ -36,6 +37,8 @@ int kmain(multiboot_info* mb_info){
 
     serial_write("Boot Complete\n");
     TTY_print("Boot Complete!\n");
+
+    asm volatile("int $49");
 
     while(loop());
 

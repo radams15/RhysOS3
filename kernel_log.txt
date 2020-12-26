@@ -1,4 +1,6 @@
 Serial Initialised!
 Initialised IDTs
 IRQs Ready!
+Added Handler For IRQ33
+Enabled Interrupts
 Boot Complete
