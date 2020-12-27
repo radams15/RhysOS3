@@ -9,7 +9,9 @@ BUILD_DIRS = [
     "build/kernel/",
     "build/kernel/boot",
     "build/kernel/x86",
-    
+    "build/kernel/drivers",
+    "build/kernel/drivers/ata",
+
     "build/iso",
     "build/iso/boot"
 ]
