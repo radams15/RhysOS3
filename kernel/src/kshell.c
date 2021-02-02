@@ -46,19 +46,29 @@ const char** kshell_split(const char* input, int* len){
 }
 
 void kshell_command(const char* command, uint32 size){
-    int argc;
-    const char** argv = kshell_split(command, &argc);
+    char* sects = kcalloc(size+1, sizeof(char));
+    strcpy(sects, command);
+
+    int argc = 1;
+    for(int i=0 ; i<size ; i++){
+        if(command[i] == ' '){
+            argc++;
+        }
+    }
+
+    const char* argv = strtok(sects, " ");
 
     if(argc == 0){
         TTY_print("\n");
-    }else if(strcmp(argv[0], "echo") == 0){
-        TTY_print("%s\n", command+strlen(argv[0])+1);
-    }else if(strcmp(argv[0], "clear") == 0){
+    }else if(strcmp(argv, "echo") == 0){
+        argv = strtok(NULL, "");
+        TTY_print("%s\n", argv);
+    }else if(strcmp(argv, "clear") == 0){
         TTY_clear();
-    }else if(strcmp(argv[0], "halt") == 0){
+    }else if(strcmp(argv, "halt") == 0){
         halt();
     }else{
-        TTY_print("Error! Unknown command \"%s\"\n", argv[0]);
+        TTY_print("Error! Unknown command \"%s\"\n", argv);
     }
 }
 
