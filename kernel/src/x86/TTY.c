@@ -37,6 +37,10 @@ void TTY_putc(char c) {
             TTY_row++;
             TTY_col = 0;
             break;
+
+        case '\t':
+            TTY_print("    ");
+            break;
         
         default:
             TTY_charat(c, TTY_colour, TTY_col, TTY_row);
@@ -132,4 +136,15 @@ void TTY_print_args(const char* text, va_list args){
             TTY_putc(text[i]);
         }
     }
+}
+
+
+void TTY_clear(){
+    TTY_col = 0;
+    TTY_row = 0;
+    for(uint32 i=0 ; i<(VGA_HEIGHT*VGA_WIDTH) ; i++){
+        TTY_putc(NULL);
+    }
+    TTY_col = 0;
+    TTY_row = 0;
 }

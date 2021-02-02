@@ -21,4 +21,6 @@ void TTY_puti(int num);
 void TTY_print(const char* text, ...);
 void TTY_print_args(const char* text, va_list args);
 
+void TTY_clear();
+
 #endif // TTY_H_INCLUDED

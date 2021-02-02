@@ -13,9 +13,13 @@ typedef struct{
     uint8 colour_depth;
 } VBE_Screen;
 
-VBE_Screen* VBE_init(uint32* fb_addr, uint32 width, uint32 height, uint8 colour_depth);
+void VBE_init(uint32* fb_addr, uint32 width, uint32 height, uint8 colour_depth);
 
 void VBE_pix(uint32 x, uint32 y, uint32 colour);
+
+void VBE_hline(uint32 x, uint32 y, uint32 w, uint32 colour);
+
+void VBE_vline(uint32 x, uint32 y, uint32 h, uint32 colour);
 
 void VBE_rect(uint32 x, uint32 y, uint32 w, uint32 h, uint32 colour);
 

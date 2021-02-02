@@ -4,3 +4,10 @@ IRQs Ready!
 Added Handler For IRQ33
 Enabled Interrupts
 Boot Complete
+Allocated 512 bits, now at <0x1070A0>
+Added keyboard handler
+Allocated 11 bits, now at <0x1072A0>
+Allocated 11 bits, now at <0x1072AB>
+Allocated 5217131040 bits, now at <0x1072B6>
+Allocated 4 bits, now at <0x7FF572B6>
+Allocated 9 bits, now at <0x7FF572BA>

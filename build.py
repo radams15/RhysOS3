@@ -18,7 +18,7 @@ BUILD_DIRS = [
 
 CC = "Tools/bin/i686-elf-gcc"
 AS = "Tools/bin/i686-elf-as"
-GRUB = "grub2-mkrescue"
+GRUB = "grub-mkrescue"
 
 STD = "gnu99"
 
@@ -85,10 +85,10 @@ def make_iso():
     run_cleanly(f"{GRUB} -o {ISO_FILE} build/iso")
 
 def run_qemu():
-    run_cleanly(f"qemu-system-i386 -cdrom {ISO_FILE} -m {MEMORY} -serial file:{KERNEL_LOGFILE}")
+    run_cleanly(f"qemu-system-i386 -cdrom {ISO_FILE} -m {MEMORY} -serial file:{KERNEL_LOGFILE} -drive format=raw,file=test.txt")
 
 def check_iso():
-    run_cleanly(f"grub2-file --is-x86-multiboot {BIN_FILE}")
+    run_cleanly(f"grub-file --is-x86-multiboot {BIN_FILE}")
 
 if __name__ == "__main__":
     clean()
